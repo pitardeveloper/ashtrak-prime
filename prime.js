@@ -61,7 +61,7 @@ client.on("message", msg => {
 
 
 client.on('message', message => {
-     if (message.content === "مساعدة") {
+     if (message.content === "+مساعدة") {
 message.author.send("اشتراك برميوم للبوت العربي" + `  **
 ╭━━━╮╱╱╱╱╭╮╱╱╱╱╱╱╱╱╭━━╮╱╱╱╭╮╱╭━━━╮
 ┃╭━╮┃╱╱╱╱┃┃╱╱╱╱╱╱╱╱┃╭╮┃╱╱╭╯╰╮┃╭━╮┃
@@ -82,7 +82,7 @@ message.author.send("اشتراك برميوم للبوت العربي" + `  **
 
 
 client.on('message', message => {
-     if (message.content === "مساعدة") {
+     if (message.content === "+مساعدة") {
 message.author.send("" + `  **
 +ping             | سرعة الأتصال
 +معلوماتي | معلومــات عــن حســابــك
