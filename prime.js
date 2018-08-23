@@ -92,12 +92,12 @@ message.author.send("" + `  **
 السيرفر                 | معلومات عن السيرفر
 مسح                  | لحذف الرسائل
 صناعة الوان          | لصناعة 200 لون
-طرد                   | لطرد الشخص
-حظر                    | لتبنيد الشخص
+طرد                   | لطرد الشخص+
+حظر                    | لتبنيد الشخص+
 اسكت                   | لاعطاء العضو ميوت
-فك سكوت               | لفك الميوت عن العضو
-تقفيل شات            | لتقفيل الشات
-فتح شات          | لفتح الشات
+تكلم               | لفك الميوت عن العضو+
+تقفيل شات            | لتقفيل الشات+
+فتح شات          | لفتح الشات+
 صناعةروم ك                      | لصناعة روم كتابي
 صناعة روم ص                     | لصناعة روم صوتي
 رومات                  | يطلع لك اسامي وارقام الرومات
@@ -335,7 +335,7 @@ return message.reply("**:white_check_mark: .. تم اعطاء العضو ميو�
   
   let command = message.content.split(" ")[0];
   
-  if (command === "فك سكوت") {
+  if (command === "+تكلم") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'console');
@@ -366,7 +366,7 @@ return message.reply("**:white_check_mark: .. تم فك الميوت عن الش
 
 client.on('message', message => {
 
-       if(message.content === prefix + "تقفيل شات") {
+       if(message.content === prefix + "+تقفيل شات") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
@@ -378,7 +378,7 @@ client.on('message', message => {
               });
                 }
 //viper
-    if(message.content === prefix + "فتح شات") {
+    if(message.content === prefix + "+فتح شات") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
 
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
@@ -395,7 +395,7 @@ client.on('message', message => {
 });
 
 
-var prefix = ""
+var prefix = "+"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -436,7 +436,7 @@ client.on('message', message => {
  
 
  
-var prefix = ""
+var prefix = "+"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
