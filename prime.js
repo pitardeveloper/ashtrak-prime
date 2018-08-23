@@ -39,7 +39,7 @@ client.on('ready', () => {
 
 
 client.on("message", msg => {
-           var prefix = "";
+           var prefix = "+";
   if(msg.content.startsWith (prefix + "معلوماتي")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
       const embed = new Discord.RichEmbed();
@@ -85,22 +85,21 @@ client.on('message', message => {
      if (message.content === "مساعدة") {
 message.author.send("" + `  **
 +ping             | سرعة الأتصال
-معلوماتي | معلومــات عــن حســابــك
-صورتي        | صورتك في الدسكورد
-تنبيه هام : كود الكرديت قيد التطوير ما تقدر تعطي احد كرديت هو قيد التطوير
++معلوماتي | معلومــات عــن حســابــك
++صورتي        | صورتك في الدسكورد
 "اوامر السيرفرات" 
 +server                 | معلومات عن السيرفر
-مسح                  | لحذف الرسائل
-صناعة الوان          | لصناعة 200 لون
++مسح                  | لحذف الرسائل
+صناعة الوان          | لصناعة 200 لون+
 طرد                   | لطرد الشخص+
 حظر                    | لتبنيد الشخص+
-اسكت                   | لاعطاء العضو ميوت
++اسكت                   | لاعطاء العضو ميوت
 تكلم               | لفك الميوت عن العضو+
 تقفيل شات            | لتقفيل الشات+
 فتح شات          | لفتح الشات+
-صناعةروم ك                      | لصناعة روم كتابي
-صناعة روم ص                     | لصناعة روم صوتي
-رومات                  | يطلع لك اسامي وارقام الرومات
++صناعةروم ك                      | لصناعة روم كتابي
++صناعة روم ص                     | لصناعة روم صوتي
++رومات                  | يطلع لك اسامي وارقام الرومات
 "اوامر ميوزك"
 +help | جميع اوامر الميوزك
 "اوامر البوت" 
@@ -153,7 +152,7 @@ client.on('message', function(msg) {
 
 
    client.on('message', message => {
-     if (message.content === "مساعدة") {
+     if (message.content === "+مساعدة") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter(`Robbie`, 'https://cdn.discordapp.com/attachments/479589770301931532/481914154450681876/84aad000d65830b4.png')
@@ -185,7 +184,7 @@ client.on('message', message => {
    
 
 client.on("message", message => {
-    var prefix = "";
+    var prefix = "+";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "مسح")) {
@@ -235,7 +234,7 @@ client.on('message' , message => {
 
 client.on('message', function(message) {
 if(!message.channel.guild) return;
-if(message.content === 'صناعة الوان') {
+if(message.content === '+صناعة الوان') {
 if(message.member.hasPermission('MANAGE_ROLES')) {
 setInterval(function(){})
 message.channel.send('يتم انشاء 200 لون انتضر | ▶️')
@@ -246,7 +245,7 @@ message.channel.send('ما معاك البرمشن المطلوب |❌🚫')
 });
 
 client.on('message', message=>{
-if (message.content === 'صناعة الوان'){
+if (message.content === '+صناعة الوان'){
 if(!message.channel.guild) return;
 if (message.member.hasPermission('MANAGE_ROLES')){
 setInterval(function(){})
@@ -274,7 +273,7 @@ client.on('message', message => {
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("صناعة روم ك")) {
+if (message.content.startsWith("+صناعة روم ك")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -285,7 +284,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("صناعة روم ص")) {
+if (message.content.startsWith("+صناعة روم ص")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -301,7 +300,7 @@ client.on("message", message => {
   
   let command = message.content.split(" ")[0];
   
-  if (command === "اسكت") {
+  if (command === "+اسكت") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'console');
@@ -496,7 +495,7 @@ client.on('message', message => {
   
   
   client.on('message', message => {
-    if (message.content === "رومات") {
+    if (message.content === "+رومات") {
         if (message.author.bot) return
                       if (!message.guild) return;
 
