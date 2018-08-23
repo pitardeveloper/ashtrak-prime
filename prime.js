@@ -89,7 +89,7 @@ message.author.send("" + `  **
 صورتي        | صورتك في الدسكورد
 تنبيه هام : كود الكرديت قيد التطوير ما تقدر تعطي احد كرديت هو قيد التطوير
 "اوامر السيرفرات" 
-السيرفر                 | معلومات عن السيرفر
++server                 | معلومات عن السيرفر
 مسح                  | لحذف الرسائل
 صناعة الوان          | لصناعة 200 لون
 طرد                   | لطرد الشخص+
@@ -101,6 +101,8 @@ message.author.send("" + `  **
 صناعةروم ك                      | لصناعة روم كتابي
 صناعة روم ص                     | لصناعة روم صوتي
 رومات                  | يطلع لك اسامي وارقام الرومات
+"اوامر ميوزك"
++help | جميع اوامر الميوزك
 "اوامر البوت" 
 +bot               | عدد السيرفرات التي تستخدم البوت
 +support           | لدخول سيرفر المساعدة الخاص بالبوت
@@ -129,8 +131,8 @@ message.author.send("" + `  **
 
 
 client.on('message', function(msg) {
-         var prefix = ""
-    if(msg.content.startsWith (prefix  + 'السيرفر')) {
+         var prefix = "+"
+    if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
