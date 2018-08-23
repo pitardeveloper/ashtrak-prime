@@ -525,6 +525,14 @@ client.on('message' , message => {
 });
 
 
+client.on('message', message => {
+    if(message.content === '+رابط'){
+        message.channel.send('https://discord.gg/FCvHhWC')
+    }
+});
+
+
+
 client.on("roleCreate",  rc => {
 const channel = rd.guild.channels.find("name", "console")
 if(channel) {
