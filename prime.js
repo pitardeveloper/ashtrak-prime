@@ -11,7 +11,7 @@ client.on('ready',  () => {
   console.log('⚙            PITAR : ibarmoda');
 client.user.setStatus("dnd");
 });
-                                                                                                                                                                                              var prefix = "!";
+                                                                                                                                                                                              var prefix = "";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -34,7 +34,7 @@ client.on('message', message => {
 
 // playing
 client.on('ready', () => {
-                                                                                                                                                                                                                                                                              client.user.setGame(`buy ii7MoDxDii`,'https://www.twitch.tv/v5bz');
+                                                                                                                                                                                                                                                                              client.user.setGame(`Robbie`,'https://www.twitch.tv/v5bz');
 });
 
 
