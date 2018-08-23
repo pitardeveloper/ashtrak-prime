@@ -151,10 +151,10 @@ client.on('message', function(msg) {
 
 
    client.on('message', message => {
-     if (message.content === "+help") {
+     if (message.content === "مساعدة") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter(`💙 ↪ World ↩ 💙`, 'https://cdn.discordapp.com/attachments/478146223589818409/480808730754023435/PicsArt_08-18-05.20.46.png')
+               .setFooter(`Robbie`, 'https://cdn.discordapp.com/attachments/479589770301931532/481914154450681876/84aad000d65830b4.png')
   .setColor("#9B59B6")
   .addField("تم ارسال الاوامر في الخاص + تاكد انك فاتح الخاص :]")
 
@@ -197,7 +197,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "💙 ↪ World ↩ 💙"
+          text: "Robbie"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
