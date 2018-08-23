@@ -82,7 +82,7 @@ message.author.send("اشتراك برميوم للبوت العربي" + `  **
 
 
 client.on('message', message => {
-     if (message.content === "$help") {
+     if (message.content === "مساعدة") {
 message.author.send("" + `  **
 +ping             | سرعة الأتصال
 معلوماتي | معلومــات عــن حســابــك
@@ -129,7 +129,7 @@ message.author.send("" + `  **
 
 
 client.on('message', function(msg) {
-         var prefix = "$$-"
+         var prefix = ""
     if(msg.content.startsWith (prefix  + 'السيرفر')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
