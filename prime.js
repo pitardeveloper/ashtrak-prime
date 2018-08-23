@@ -545,7 +545,7 @@ client.on('message', message => {
         .setDescription(`
 **
 ---------------------
-https://discord.gg/FCvHhWC  هذا هو رابط سيرفر
+-[${message.guild.name}]  هذا هو رابط سيرفر
 ---------------------
 -هذا الرابط صالح ل 100 مستخدم فقط
 ---------------------
