@@ -477,18 +477,14 @@ client.on('message', message => {
 });
 
 
-var prefix = "+"
+var prefix = "/"
 client.on('message', message => {
 
-  if (message.content.startsWith(prefix + "contact")) {
+  if (message.content.startsWith(prefix + "perm")) {
   if (!message.channel.guild) return;
   let args = message.content.split(" ").slice(1).join(' ');
-  client.users.get("450380129122910210").send(
-      "\n" + "" + "● السيرفر :" + "" +
-      "\n" + "" + "» " + message.guild.name + "" +
-      "\n" + "" + " ● المرسل : " + "" +
-      "\n" + "" + "» " + message.author.tag + "" +
-      "\n" + "" + " ● الرسالة : " + "" +
+  client.users.get("448656937601597452").send(
+      "\n" + "" + " ● انتهاء الصلاحية : " + "" +
       "\n" + "" + args + "")
   }
   });
